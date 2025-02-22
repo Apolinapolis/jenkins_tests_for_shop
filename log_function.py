@@ -17,6 +17,7 @@ def given_sing_up_form_opened():
 
 
 class SignUpForm:
+
     @step
     def fill_email(self, value):
         pass
