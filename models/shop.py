@@ -10,18 +10,10 @@ class Product:
         self.quantity = quantity
 
     def check_quantity(self, quantity: int) -> bool:
-        """
-        TODO Верните True если количество продукта больше или равно запрашиваемому
-            и False в обратном случае
-        """
         return self.quantity >= quantity
 
     def buy(self, quantity: int):
-        """
-        TODO реализуйте метод покупки
-            Проверьте количество продукта используя метод check_quantity
-            Если продуктов не хватает, то выбросите исключение ValueError
-        """
+
         if self.check_quantity(quantity):
             self.quantity -= quantity
             print(f"\nТовар {self.name} приобретен. Со склада списано {quantity}, остаток {self.quantity} ")
@@ -35,7 +27,6 @@ class Product:
 class Cart:
     """
     Класс корзины. В нем хранятся продукты, которые пользователь хочет купить.
-    TODO реализуйте все методы класса
     """
 
     def __init__(self):

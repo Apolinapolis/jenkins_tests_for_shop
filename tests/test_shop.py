@@ -26,27 +26,17 @@ class TestProducts:
     """
 
     def test_product_check_quantity(self, book):
-        # TODO напишите проверки на метод check_quantity
         assert book.check_quantity(book.quantity) == True
 
     def test_product_buy(self, book):
-        # TODO напишите проверки на метод buy
         assert book.buy(500) is None
 
     def test_product_buy_more_than_available(self, book):
-        # TODO напишите проверки на метод buy,
-        #  которые ожидают ошибку ValueError при попытке купить больше, чем есть в наличии
         with pytest.raises(ValueError):
             book.buy(2000)
 
 
 class TestCart:
-    """
-    TODO Напишите тесты на методы класса Cart
-        На каждый метод у вас должен получиться отдельный тест
-        На некоторые методы у вас может быть несколько тестов.
-        Например, негативные тесты, ожидающие ошибку (используйте pytest.raises, чтобы проверить это)
-    """
 
     def test_cart_add_product_str(self, cart, book):
         cart.add_product(book, '2000')
