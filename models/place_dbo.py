@@ -1,12 +1,6 @@
 class PlaceDbo:
-
-    def __init__(self, id:int, dbo:bool = False, agr:bool = False):
-        self.id = id
+    """Имитирует place из БД"""
+    def __init__(self, name:str, dbo:bool = False, agr:bool = False):
+        self.name = name
         self.dbo = dbo
         self.agr = agr
-
-    def set_dbo(self, value:bool):
-        self.dbo = value
-
-    def set_agr(self, value:bool):
-        self.agr = value
